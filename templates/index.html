@@ -3,9 +3,16 @@
         <link rel="stylesheet" href="/static/style.css" />
         <body>
             <h1>
-                Hello world!
-                <p>artist: {{trackName}}</p>
+                <p>Song: {{trackName}}</p>
+                <p>Artist: {{randomArtist}}</p> 
             </h1>
+            <h2>
+                <img src= {{coverArt}} alt={{trackName}}>
+            </h2>
+            <h3>
+                <a href={{preUrl}} target="_blank"></a> 
+                <iframe width="300" height="200" src= {{preUrl}} frameborder="0" allowfullscreen></iframe>
+            </h3>
         </body>
     </head>
 </html>
