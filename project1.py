@@ -41,19 +41,22 @@ spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 results = spotify.artist_top_tracks(artistURL)
 
 for track in results['tracks'][:1]:
-    print('track    : ' + track['name'])
     trackName= track['name']
-    #print('artist   : ' + track['artist'])
-    #artistName= track['artists']
-    print('audio    : ' + track['preview_url'])
     preUrl= track['preview_url']
-    print('cover art: ' + track['album']['images'][0]['url'])
     coverArt= track['album']['images'][0]['url']
-    print()
+
+results = spotify.search(q='artist:' + randomArtist, type='artist')
+items = results['artists']['items']
+if len(items) > 0:
+    artist = items[0]
+    print(artist['name'], artist['images'][0]['url'])
+    artistImage= artist['images'][0]['url']
+
+
 
 @app.route("/")
 def index():
-    return flask.render_template("index.html", trackName=trackName, randomArtist=randomArtist, preUrl=preUrl, coverArt=coverArt)
+    return flask.render_template("index.html", trackName=trackName, randomArtist=randomArtist, artistImage=artistImage,  preUrl=preUrl, coverArt=coverArt)
 
 
 

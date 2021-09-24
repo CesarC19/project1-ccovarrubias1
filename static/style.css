@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+h1{
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 100px;
+    color: azure;
+}
+h2{
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 50px;
+    color: white;
+}
+h5{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}

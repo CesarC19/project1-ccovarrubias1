@@ -1,18 +1,29 @@
 <html>
     <head>
+        <style>
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
         <link rel="stylesheet" href="/static/style.css" />
         <body>
             <h1>
-                <p>Song: {{trackName}}</p>
-                <p>Artist: {{randomArtist}}</p> 
+                <p>{{trackName}}</p>
             </h1>
             <h2>
-                <img src= {{coverArt}} alt={{trackName}}>
+                <p>by {{randomArtist}}</p>
             </h2>
             <h3>
-                <a href={{preUrl}} target="_blank"></a> 
-                <iframe width="300" height="200" src= {{preUrl}} frameborder="0" allowfullscreen></iframe>
+                <img src= {{artistImage}} alt={{randomArtist}} style="width:150px">
             </h3>
+            <h4>
+                <img src= {{coverArt}} alt={{trackName}} style="width: 500px">
+            </h4>
+            <h5>
+                <iframe width="300" height="200" src= {{preUrl}} frameborder="0" ></iframe>
+            </h5>
         </body>
     </head>
 </html>
