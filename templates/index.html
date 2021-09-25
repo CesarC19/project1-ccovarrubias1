@@ -21,8 +21,17 @@
             <h4>
                 <img src= {{coverArt}} alt={{trackName}} style="width: 500px">
             </h4>
+            <figure>
+                <figcaption>Listen to {{trackName}}:</figcaption>
+                <audio
+                    controls
+                    src={{preUrl}}>
+                        Your browser does not support the
+                        <code>audio</code> element.
+                </audio>
+            </figure>
             <h5>
-                <iframe width="300" height="200" src= {{preUrl}} frameborder="0" ></iframe>
+                <a href= {{songLyrics}}Lyrics></a>
             </h5>
         </body>
     </head>
